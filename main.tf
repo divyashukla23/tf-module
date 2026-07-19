@@ -9,3 +9,11 @@ module "ec2_instance" {
   instance_type = "t2.micro"
   name          = "my-module-ec2"
 }
+
+module "s3_bucket" {
+  source = "./modules/s3"
+
+  bucket_name = "divya-demo-bucket-12345"
+  name        = "my-s3-bucket"
+  environment = "dev"
+}
